@@ -1,0 +1,90 @@
+<!-- frontend/book_request.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Request</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* frontend/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#searchInput {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 60%;
+    max-width: 400px;
+    font-size: 1rem;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button[disabled] {
+    cursor: not-allowed;
+    color: #aaa;
+    background: #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <div id="header-container"></div> <!-- Placeholder for the header -->
+    <h4> Book Request </h4>
+
+    <input type="text" id="searchInput" placeholder="Search by title" />
+
+    <table id="booksTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="js/book_request.js"></script>
+    <script>
+        // Load the header dynamically
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Now call your existing function to add nav links
+                loadNavLinks(); 
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    <script src="js/nav.js"></script> <!-- Include nav.js to access loadNavLinks -->
+</body>
+</html>

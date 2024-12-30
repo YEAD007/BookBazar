@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1 class="lib">Register</h1>
+    <form id="registerForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <!-- Hidden role field with default value -->
+        <input type="hidden" id="role" value="student">
+
+        <!-- Student-specific fields -->
+        <div id="studentFields">
+            <label for="studentRoll">Student Roll:</label>
+            <input type="text" id="studentRoll" required>
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" required>
+
+            <label for="studentCourse">Course:</label>
+            <input type="text" id="studentCourse" required>
+
+            <label for="studentSemester">Semester:</label>
+            <input type="text" id="studentSemester" required>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="js/register.js"></script>
+</body>
+</html>

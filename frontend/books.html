@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Books</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    th {
+        background-color: #00ffc8;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="header-container"></div> 
+    <main>
+        <h2>Books Available</h2>
+        <table id="booksTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Publisher</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>Library Management System</p>
+    </footer>
+    <script src="js/books.js"></script>
+    <script>
+        // Load the header dynamically
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Now call your existing function to add nav links
+                loadNavLinks(); 
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

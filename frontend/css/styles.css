@@ -1,0 +1,253 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.home-image {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-image img {
+    width: 100px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.home-image img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+
+
+.lib{
+    background: linear-gradient(90deg, #558787, #2c2e2e);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+
+
+/* Container for the form */
+form {
+    background-color: #faf3f3; 
+    padding: 25px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); 
+    width: 320px; 
+    margin: 20px auto; 
+    color: #1c1313; 
+    font-family: 'Helvetica', sans-serif; 
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444; 
+    border-radius: 6px; 
+    background-color: #333; 
+    color: #fff; 
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    background-color: #0056b3; 
+}
+
+label {
+    font-size: 14px;
+    color: #1a0101; 
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+/* Title Styling */
+.book {
+    color: #9ae4ef; /* Gold for 'BOOK' */
+}
+
+.bazar {
+    color:#f4f4f4; /* Blue for 'BAZAR' */
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(37, 113, 126, 0.481);
+}
+
+/* Input field styling */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0e1217;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styling */  
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(90deg, #558787, #2c2e2e); /* Gradient background */
+    color: white;
+    padding: 7px 2px; /* Increased padding for space */
+    text-align: left; /* Aligns text to the left */
+    position: fixed; /* Keeps navbar fixed */
+    top: 0;
+    left: 0;
+    right: 0; /* Ensures it fills the full width */
+    width: 100vw;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Separates logo and menu items */
+    align-items: center;
+    font-size: 1.2em;
+}
+
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #00b3b3; /* Custom color for logo */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #00b3b3; /* Hover effect */
+}
+
+
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 3px 0;
+    background: #558787;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Dropdown styling */
+.login-form-dropdown {
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    right: 20px;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 250px;
+}
+
+.login-btn {
+    position: relative;
+    margin: 20px;
+}
+
+
+
+

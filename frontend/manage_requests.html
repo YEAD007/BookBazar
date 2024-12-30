@@ -1,0 +1,48 @@
+<!-- frontend/manage_requests.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Requests - Library Management System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header-container"></div> <!-- Placeholder for the header -->
+    
+    <main>
+        <h2>Manage Book Requests</h2>
+        <table id="requestsTable">
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Student Name</th>
+                    <th>Requested Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Book requests will be dynamically added here -->
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>Library Management System.</p>
+    </footer>
+    
+    <script>
+        // Load the header dynamically
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                loadNavLinks(); // Call the navigation loading function from nav.js
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    <script src="js/nav.js"></script> <!-- Include nav.js for loadNavLinks -->
+    <script src="js/manage_requests.js"></script> <!-- Include script for loading requests and issuing books -->
+</body>
+</html>

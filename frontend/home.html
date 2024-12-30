@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header-container"></div> 
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Our library offers a wide range of books across various genres. You can easily register and borrow books through our user-friendly system.</p>
+        </section>
+    
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>User Registration</li>
+                <li>Book Borrowing and Returning</li>
+                <li>View Available Books</li>
+                <li>Administrator Functions</li>
+            </ul>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <p>Library Management System.</p>
+    </footer>
+    <script src="js/home.js"></script>
+    <script>
+      
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                
+                loadNavLinks(); 
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    <script src="js/nav.js"></script> 
+    
+
+</body>
+</html>
